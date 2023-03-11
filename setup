@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+chmod 777 1337wifi
+cp 1337wifi /usr/local/bin/
+echo "Success!\nWrite 1337wifi !"
+

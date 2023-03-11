@@ -1,0 +1,98 @@
+#!/usr/bin/python3
+# Date-Creation 11.03.2023 17:33
+# Created: 1337rce
+# Info: wlan0 monitor automator
+import os
+import time
+
+
+def banner():
+    os.system('clear')
+    print('''\033[91m⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⢀⠎⠀⠀⢀⣀⣤⣤⣀⣘⣿⣿⣿⣆⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢠⣏⡀⠀⠀⠈⣉⣻⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⡠⠂⠀⠏⣀⡀⠀⠀⠀⠉⠛⠿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀
+⠀⠀⠀⣴⣤⣴⠞⢻⣿⠛⢿⣆⠀⠀⣿⣠⣿⣿⣿⣿⣿   ___________⠀⠀⠀⠀⠀
+⠀⠀⠀⣿⣿⠟⠀⡘⠋⠉⣙⣻⣇⠀⢹⣿⣿⣿⣿⣿⣿⣇⠀ ⠀⠀CREATED
+⠀⠀⠀⣿⣡⡄⠚⠻⢿⣿⣿⠿⣿⡆⢻⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀1337RCE
+⠀⠀⠀⣿⡿⢿⢆⠀⠀⠥⣖⣿⣿⣿⡈⣿⣿⣿⣿⣿⣿⣿⣿⡄-----------⠀⠀
+⠀⠀⠤⠁⠤⢤⣦⣶⣿⣿⣿⣿⣿⣿⣷⣬⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀
+⠀⠀⠀⠀⠀⠀⠈⠙⠻⡿⢿⣿⠿⠛⢻⠛⢿⣿⣿⣿⣿⣿⡿⠿⠛⠀
+⠀⠀⠀⠀⠀⣀⡀⢀⣪⣀⣀⠀⣀⣠⣤⣷⣾⣿⣿⣿⣿⣿⣿⣷⣄⠀
+⠀⠀⣐⣋⣿⣿⣿⠿⡿⠁⢠⣾⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷
+⣠⣾⣿⣿⣿⠁⠀⢠⠁⢠⠏⣿⡿⠁⣸⡝⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿\033[93mH4ck1ng T007K1t (\033[96m1337RCE\033[93m) 
+
+    ''')
+    print('''\033[91m
+            \033[91m [\033[96m*\033[91m] \033[97mCreated \033[5m\033[1;91m=  \033[97m1337RCE   \033[25m 
+            \033[91m [\033[96m*\033[91m] \033[97mCreated \033[5m\033[1;91m=  \033[97m1337RCE   \033[25m 
+    	    \033[91m [\033[96m*\033[91m] \033[97mCreated \033[5m\033[1;91m=  \033[97m1337RCE   \033[25m 	
+    ''')
+
+
+def logo():
+    os.system('clear')
+    print('''\033[91m⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⢀⢀⠎⠀⠀⢀⣀⣤⣤⣀⣘⣿⣿⣿⣆⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⢠⣏⡀⠀⠀⠈⣉⣻⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⡠⠂⠀⠏⣀⡀⠀⠀⠀⠉⠛⠿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀
+    ⠀⠀⠀⣴⣤⣴⠞⢻⣿⠛⢿⣆⠀⠀⣿⣠⣿⣿⣿⣿⣿   ___________⠀⠀⠀⠀⠀
+    ⠀⠀⠀⣿⣿⠟⠀⡘⠋⠉⣙⣻⣇⠀⢹⣿⣿⣿⣿⣿⣿⣇⠀ ⠀⠀CREATED
+    ⠀⠀⠀⣿⣡⡄⠚⠻⢿⣿⣿⠿⣿⡆⢻⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀1337RCE
+    ⠀⠀⠀⣿⡿⢿⢆⠀⠀⠥⣖⣿⣿⣿⡈⣿⣿⣿⣿⣿⣿⣿⣿⡄-----------⠀⠀
+    ⠀⠀⠤⠁⠤⢤⣦⣶⣿⣿⣿⣿⣿⣿⣷⣬⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀
+    ⠀⠀⠀⠀⠀⠀⠈⠙⠻⡿⢿⣿⠿⠛⢻⠛⢿⣿⣿⣿⣿⣿⡿⠿⠛⠀
+    ⠀⠀⠀⠀⠀⣀⡀⢀⣪⣀⣀⠀⣀⣠⣤⣷⣾⣿⣿⣿⣿⣿⣿⣷⣄⠀
+    ⠀⠀⣐⣋⣿⣿⣿⠿⡿⠁⢠⣾⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷
+    ⣠⣾⣿⣿⣿⠁⠀⢠⠁⢠⠏⣿⡿⠁⣸⡝⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿\033[93mH4ck1ng T007K1t (\033[96m1337RCE\033[93m) 
+    
+    [1]Monitor ON   [2]Monitor OFF
+        ''')
+
+
+def error():
+    print('''\033[91m
+,------.,------. ,------.  ,-----. ,------.  
+|  .---'|  .--. '|  .--. ''  .-.  '|  .--. ' 
+|  `--, |  '--'.'|  '--'.'|  | |  ||  '--'.' 
+|  `---.|  |\  \ |  |\  \ '  '-'  '|  |\  \  
+`------'`--' '--'`--' '--' `-----' `--' '--' 
+    ''')
+
+
+banner()
+time.sleep(1.2)
+os.system('clear')
+logo()
+chose_action = int(input('\033[96m1337@rce:$> Choose action\033[93m: '))
+while not chose_action > 0 or chose_action > 2:
+    os.system('clear')
+    error()
+    print('1337@error:$> This action is not valid!')
+    time.sleep(1)
+    os.system('clear')
+    logo()
+    chose_action = int(input('\033[96m1337@rce:$> Choose action\033[93m: '))
+
+if chose_action == 1:
+    os.system('clear')
+    banner()
+    get_device_name = input('\033[96m1337@wardrive:$>Enter wlan name: ')
+    os.system(f'airmon-ng check kill')
+    os.system(f'ifconfig {get_device_name} down; iwconfig {get_device_name} mode monitor; ifconfig {get_device_name} up')
+    os.system('clear')
+    banner()
+    print('1337@pwn:$>Success!')
+    time.sleep(0.5)
+    print('1337@pwn:$>Good bye!')
+else:
+    os.system('clear')
+    banner()
+    get_device_name_off = input('\033[96m1337@wardrive:$>Enter wlan name: ')
+    os.system(f'ifconfig {get_device_name_off} down; iwconfig {get_device_name_off} mode managed; ifconfig {get_device_name_off} up')
+    os.system('systemctl start NetworkManager')
+    os.system('clear')
+    banner()
+    print('1337@pwn:$>Success!')
+    time.sleep(0.5)
+    print('1337@pwn:$>Good bye!')
